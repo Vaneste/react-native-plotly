@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {
   StyleSheet,
-  WebView,
   Platform,
   StyleProp,
   ViewStyle,
@@ -12,6 +11,8 @@ import {
 import PlotlyBasic from './lib/PlotlyBasic';
 import PlotlyFull from './lib/PlotlyFull';
 import { getDiff } from './diff';
+
+import { WebView } from 'react-native-webview';
 
 /*
 Base 64 encode source code
