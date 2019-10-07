@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { WebView, StyleProp, ViewStyle, NativeSyntheticEvent, WebViewMessageEventData } from 'react-native';
+import { StyleProp, ViewStyle, NativeSyntheticEvent, WebViewMessageEventData } from 'react-native';
+import { WebView } from 'react-native-webview';
 declare type Data = any;
 declare type Layout = any;
 declare type Config = any;

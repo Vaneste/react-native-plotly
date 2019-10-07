@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { StyleSheet, WebView, Platform, } from 'react-native';
+import { StyleSheet, Platform, } from 'react-native';
 import PlotlyBasic from './lib/PlotlyBasic';
 import PlotlyFull from './lib/PlotlyFull';
 import { getDiff } from './diff';
+import { WebView } from 'react-native-webview';
 /*
 Base 64 encode source code
 Postmessage source code into webview
@@ -102,7 +103,8 @@ class Plotly extends React.Component {
         };
         this.invokeEncoded = (str) => {
             if (this.chart && this.chart.current)
-                this.chart.current.postMessage(str);
+                //this.chart.current.postMessage(str);
+                this.chart.current.injectJavaScript(str);
         };
         this.initialPlot = (data, layout, config) => {
             this.invoke(`

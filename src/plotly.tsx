@@ -161,7 +161,9 @@ class Plotly extends React.Component<PlotlyProps> {
   };
 
   invokeEncoded = (str: string) => {
-    if (this.chart && this.chart.current) this.chart.current.postMessage(str);
+    if (this.chart && this.chart.current)
+      //this.chart.current.postMessage(str);
+      this.chart.current.injectJavaScript(str);
   };
 
   initialPlot = (data: Data[], layout?: Layout, config?: Config) => {
